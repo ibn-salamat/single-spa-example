@@ -1,7 +1,7 @@
 {
   "name": "@single-spa/spa-react-2",
   "scripts": {
-    "dev": "webpack serve",
+    "dev": "webpack serve --port 8081",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",
