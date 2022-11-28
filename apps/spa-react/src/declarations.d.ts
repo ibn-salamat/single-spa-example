@@ -1,3 +1,4 @@
+
 declare module "*.html" {
   const rawHtmlFile: string;
   export = rawHtmlFile;
@@ -37,3 +38,8 @@ declare module "*.svg" {
   const src: string;
   export default src;
 }
+
+// declare module '@single-spa/spa-react-2' {
+//   // @ts-ignore
+//   export const title$: Subject<any>
+// }

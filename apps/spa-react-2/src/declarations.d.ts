@@ -1,3 +1,4 @@
+
 declare module "*.html" {
   const rawHtmlFile: string;
   export = rawHtmlFile;
@@ -36,4 +37,9 @@ declare module "*.webp" {
 declare module "*.svg" {
   const src: string;
   export default src;
+}
+
+declare module "@single-spa/spa-react" {
+  // @ts-ignore
+  export const todos$: BehaviorSubject<any> 
 }

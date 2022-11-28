@@ -14,17 +14,11 @@ const applications = constructApplications({
   loadApp({ name }) {
     return System.import(name);
   }
-}).map(i => {
-  i.customProps = {
-    todos: []
-  }
-  return i;
 });
+
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
 applications.forEach(registerApplication);
-
-console.log(applications)
 
 layoutEngine.activate();
 start();

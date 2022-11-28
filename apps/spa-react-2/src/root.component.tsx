@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import { Subject } from "rxjs";
+import { useState } from "react";
+import { todos$ } from "@single-spa/spa-react"
 
-export const title$ = new Subject();
 
 export default function Root(props) {
   const [titleTodo, setTitleTodo] = useState("");
@@ -9,12 +8,10 @@ export default function Root(props) {
   function createTodo(){
     if(!titleTodo.trim()) return;
 
-    console.log("Create todo")
+    todos$.next([...todos$.getValue(), titleTodo]);
+    setTitleTodo("")
   }
 
-  useEffect(() => {
-    title$.next(titleTodo)
-  },[titleTodo])
 
   return <section className="block">
 
