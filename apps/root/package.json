@@ -1,4 +1,5 @@
 {
+  "version": "0.0.0",
   "name": "@single-spa/root-config",
   "scripts": {
     "dev": "webpack serve --port 9000 --env isLocal",
